@@ -50,6 +50,61 @@ main {
     text-align: center;
 }
 
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 48px 24px 96px;
+    text-align: center;
+}
+
+.projects-section h2 {
+    margin: 0;
+    color: #DEDEDE;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.projects-display {
+    display: grid;
+    width: min(900px, 90vw);
+    aspect-ratio: 1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 32px;
+    padding: 48px;
+    background-color: #5D4E63;
+}
+
+.project-card {
+    min-width: 0;
+}
+
+.project-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    margin: 12px 0 4px;
+    font-size: 18px;
+}
+
+.playtest-link {
+    display: inline;
+    width: auto;
+    height: auto;
+    padding: 0;
+    background: none;
+    color: #DEDEDE;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
 h1 {
     margin: 0;
     font-size: 48px;
@@ -90,4 +145,13 @@ p {
 
 span {
     color: #D16BFC;
+}
+
+@media (max-width: 600px) {
+    .projects-display {
+        aspect-ratio: auto;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 32px;
+    }
 }
