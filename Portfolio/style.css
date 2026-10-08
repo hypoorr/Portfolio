@@ -12,6 +12,21 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+body::before {
+    position: fixed;
+    z-index: 10;
+    inset: 0;
+    background: radial-gradient(
+        circle 220px at var(--cursor-x, -1000px) var(--cursor-y, -1000px),
+        rgba(209, 107, 252, 0.12),
+        transparent 75%
+    );
+    content: "";
+    opacity: var(--cursor-light-opacity, 0);
+    pointer-events: none;
+    transition: opacity 180ms ease-out;
+}
+
 .site-header {
     display: flex;
     justify-content: center;
@@ -20,7 +35,7 @@ body {
 
 nav {
     display: flex;
-    gap: 8px;
+    gap: 80px;
 }
 
 button {
@@ -38,6 +53,17 @@ button {
     font-size: 24px;
     font-weight: 700;
     cursor: pointer;
+    transition: transform 120ms ease-out;
+}
+
+button:hover,
+.linkedin-link:hover {
+    transform: scale(1.04);
+}
+
+button:active,
+.linkedin-link:active {
+    transform: scale(0.96);
 }
 
 main {
@@ -66,10 +92,17 @@ main {
     font-weight: 700;
 }
 
+.projects-hint {
+    margin: -24px 0 0;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+}
+
 .projects-display {
     display: grid;
     width: min(900px, 90vw);
-    aspect-ratio: 1;
+    aspect-ratio: 16 / 9;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
     gap: 32px;
@@ -79,6 +112,14 @@ main {
 
 .project-card {
     min-width: 0;
+}
+
+.project-image-button {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    background: none;
 }
 
 .project-card img {
@@ -93,6 +134,12 @@ main {
     font-size: 18px;
 }
 
+.project-description {
+    margin: 0 0 8px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
 .playtest-link {
     display: inline;
     width: auto;
@@ -100,9 +147,50 @@ main {
     padding: 0;
     background: none;
     color: #DEDEDE;
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-weight: 400;
     text-decoration: underline;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 48px 24px 96px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin: 0;
+    color: #DEDEDE;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.contact-email {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.contact-email a {
+    color: inherit;
+}
+
+.linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 120ms ease-out;
+}
+
+.linkedin-link img {
+    display: block;
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
 }
 
 h1 {
@@ -115,6 +203,25 @@ p {
     margin: 12px 0 0;
     font-size: 24px;
     font-weight: 700;
+}
+
+.technology-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.technology-logos img {
+    width: 120px;
+    height: 80px;
+    object-fit: contain;
+    transition: transform 120ms ease-out;
+}
+
+.technology-logos img:hover {
+    transform: scale(1.04);
 }
 
 .scroll-arrow {

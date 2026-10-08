@@ -10,29 +10,48 @@
     <header class="site-header">
         <nav aria-label="Main navigation">
             <button type="button">Projects</button>
-            <button type="button">Home</button>
+            <button type="button">About</button>
             <button type="button">Contact</button>
         </nav>
     </header>
     <main>
         <h1>Hi, I'm Oliver <span>Heron</span></h1>
         <p>I'm a game <span>programmer</span> making games worth playing.</p>
+        <div class="technology-logos" aria-label="Technologies">
+            <img src="UnityLogo.png" alt="Unity logo">
+            <img src="CsharpLogo.png" alt="C sharp logo">
+        </div>
         <img class="scroll-arrow" src="Arrow.png" alt="">
     </main>
     <section class="projects-section" id="projects" aria-labelledby="projects-title">
         <h2 id="projects-title">Projects</h2>
+        <p class="projects-hint">Click a project to see the code <span>breakdown</span></p>
         <div class="projects-display">
             <article class="project-card">
-                <img src="Placeholder.png" alt="Placeholder artwork for Project One">
-                <h3>Project One</h3>
+                <button class="project-image-button" type="button" aria-label="View Project One code breakdown">
+                    <img src="Placeholder.png" alt="Placeholder artwork for Project One">
+                </button>
+                <h3>Orbit Adventure</h3>
+                <p class="project-description">A <span>procedurally generated</span> open world exploration game where you uncover weird and wacky things about all the planets you visit.</p>
                 <button class="playtest-link" type="button">Playtest here</button>
             </article>
             <article class="project-card">
-                <img src="Placeholder.png" alt="Placeholder artwork for Project Two">
-                <h3>Project Two</h3>
+                <button class="project-image-button" type="button" aria-label="View Project Two code breakdown">
+                    <img src="Placeholder.png" alt="Placeholder artwork for Project Two">
+                </button>
+                <h3>Orbit Adventure: Rebellion</h3>
+                <p class="project-description">A <span>wave survival shooter</span> game based on Orbit Adventure where you get exponentially more powerful while fighting of waves of aliens.</p>
                 <button class="playtest-link" type="button">Playtest here</button>
             </article>
         </div>
     </section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Get In <span>Contact</span></h2>
+        <p class="contact-email"><a href="mailto:oliver.heron11@gmail.com">oliver.heron11@gmail.com</a></p>
+        <a class="linkedin-link" href="https://www.linkedin.com/in/oliver-heron-41874943b" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn">
+            <img src="LinkedinLogo.png" alt="">
+        </a>
+    </section>
+    <script src="main.js" defer></script>
 </body>
 </html>
