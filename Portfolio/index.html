@@ -9,9 +9,9 @@
 <body>
     <header class="site-header">
         <nav aria-label="Main navigation">
-            <button type="button">Projects</button>
-            <button type="button">About</button>
-            <button type="button">Contact</button>
+            <button type="button" data-scroll-target="projects">Projects</button>
+            <button type="button" data-scroll-target="about">About</button>
+            <button type="button" data-scroll-target="contact">Contact</button>
         </nav>
     </header>
     <main>
@@ -23,6 +23,12 @@
         </div>
         <img class="scroll-arrow" src="Arrow.png" alt="">
     </main>
+    <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="about-display">
+            <h2 id="about-title">About me</h2>
+            <p>i make <span>cool</span> games :)</p>
+        </div>
+    </section>
     <section class="projects-section" id="projects" aria-labelledby="projects-title">
         <h2 id="projects-title">Projects</h2>
         <p class="projects-hint">Click a project to see the code <span>breakdown</span></p>
@@ -52,6 +58,9 @@
             <img src="LinkedinLogo.png" alt="">
         </a>
     </section>
+    <button class="back-to-top" type="button" aria-label="Back to top">
+        <span class="back-to-top-arrow" aria-hidden="true"></span>
+    </button>
     <script src="main.js" defer></script>
 </body>
 </html>
