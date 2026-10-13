@@ -173,13 +173,22 @@ main {
     height: auto;
     padding: 0;
     background: none;
+    transition: transform 120ms ease-out;
+}
+
+.project-image-button:hover {
+    transform: scale(1.04);
+}
+
+.project-image-button:active {
+    transform: scale(0.96);
 }
 
 .project-card img {
     display: block;
     width: 100%;
     aspect-ratio: 4 / 3;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .project-card h3 {
@@ -274,6 +283,122 @@ main {
     background-color: #DEDEDE;
     mask: url("Arrow.png") center / contain no-repeat;
     -webkit-mask: url("Arrow.png") center / contain no-repeat;
+}
+
+.breakdown-page {
+    min-height: 100vh;
+}
+
+.breakdown-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 32px 24px 24px;
+    text-align: center;
+}
+
+.back-to-projects {
+    color: #DEDEDE;
+    font-size: 16px;
+}
+
+.system-navigation {
+    display: grid;
+    width: min(900px, 100%);
+    grid-template-columns: 64px minmax(0, 1fr) 64px;
+    align-items: center;
+    gap: 24px;
+}
+
+.system-navigation h1 {
+    font-size: 36px;
+}
+
+.system-arrow {
+    display: flex;
+    width: 64px;
+    height: 64px;
+    align-items: center;
+    justify-content: center;
+    background-color: #5D4E63;
+    color: #DEDEDE;
+    font-size: 36px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 120ms ease-out;
+}
+
+.breakdown-content {
+    display: flex;
+    width: min(900px, 90vw);
+    flex-direction: column;
+    gap: 24px;
+    margin: 24px auto 96px;
+    padding: 48px;
+    background-color: #5D4E63;
+}
+
+.system-planning {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+}
+
+.functional-requirements,
+.flowchart-planning {
+    min-width: 0;
+    margin: 0;
+    padding: 24px;
+    background-color: #8E7B96;
+}
+
+.functional-requirements h2,
+.flowchart-planning figcaption {
+    margin: 0 0 16px;
+    color: #DEDEDE;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.functional-requirements p {
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.functional-requirements p:last-child {
+    margin-bottom: 0;
+}
+
+.flowchart-planning img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+}
+
+.breakdown-image {
+    display: block;
+    width: 100%;
+    max-height: 460px;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+}
+
+.breakdown-descriptions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.breakdown-descriptions p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
 }
 
 h1 {
@@ -376,5 +501,33 @@ span {
         grid-template-columns: 1fr;
         gap: 40px;
         padding: 32px;
+    }
+
+    .system-navigation {
+        grid-template-columns: 48px minmax(0, 1fr) 48px;
+        gap: 12px;
+    }
+
+    .system-navigation h1 {
+        font-size: 26px;
+    }
+
+    .system-arrow {
+        width: 48px;
+        height: 48px;
+    }
+
+    .breakdown-content {
+        padding: 24px;
+    }
+
+    .system-planning {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .functional-requirements,
+    .flowchart-planning {
+        padding: 20px;
     }
 }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbit Adventure Code Breakdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="breakdown-page">
+    <header class="breakdown-header">
+        <a class="back-to-projects" href="index.html#projects">Back to projects</a>
+        <nav class="system-navigation" aria-label="Project systems">
+            <a class="system-arrow" href="orbit-adventure-system-3.html" aria-label="Previous system">&larr;</a>
+            <h1>Orbit Adventure: Inventory System</h1>
+            <a class="system-arrow" href="orbit-adventure-system-2.html" aria-label="Next system">&rarr;</a>
+        </nav>
+    </header>
+    <main class="breakdown-content">
+        <section class="system-planning" aria-label="System planning">
+            <div class="functional-requirements">
+                <h2>Functional requirement</h2>
+                <p>“There should be a inventory system that the player can store their items in. When the designated button is pressed for inventory, a UI with all the collected resources should be displayed. When the player gets an item it should be added to the inventory.</p>
+                <p>Testable criteria:</p>
+                <p>Pressing the assigned inventory button opens the inventory UI</p>
+                <p>When collecting an item, it is visible in the inventory”</p>
+            </div>
+            <figure class="flowchart-planning">
+                <figcaption>Flowchart planning</figcaption>
+                <img src="InventorySystemFlowchart.png" alt="Inventory System Flowchart">
+            </figure>
+        </section>
+        <img class="breakdown-image" src="InventorySystem1.png" alt="Inventory System">
+        <div class="breakdown-descriptions">
+            <p>Inventory item class + variables</p>
+        </div>
+        <img class="breakdown-image" src="InventorySystem2.png" alt="Inventory System">
+        <div class="breakdown-descriptions">
+            <p>Constant checks for inventory bind pressed</p>
+        </div>
+        <img class="breakdown-image" src="InventorySystem3.png" alt="Inventory System">
+        <div class="breakdown-descriptions">
+            <p>This check is to see if you run out of an item in your inventory and then deletes it from the list.</p>
+        </div>
+        <img class="breakdown-image" src="InventorySystem4.png" alt="Inventory System">
+        <div class="breakdown-descriptions">
+            <p>Method used across multiple scripts to safely add items to inventory. You can specify what item to add, its quantity and if the item is a tool. It manages stacks to ensure there is no overflow of the max item count (99).</p>
+        </div>
+    </main>
+</body>
+</html>
