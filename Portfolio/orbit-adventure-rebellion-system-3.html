@@ -11,7 +11,7 @@
         <a class="back-to-projects" href="index.html#projects">Back to projects</a>
         <nav class="system-navigation" aria-label="Project systems">
             <a class="system-arrow" href="orbit-adventure-rebellion-system-2.html" aria-label="Previous system">&larr;</a>
-            <h1>Orbit Adventure: Rebellion — System 3</h1>
+            <h1>Orbit Adventure: Rebellion Ability/upgrade system</h1>
             <a class="system-arrow" href="orbit-adventure-rebellion.html" aria-label="Next system">&rarr;</a>
         </nav>
     </header>
@@ -19,20 +19,39 @@
         <section class="system-planning" aria-label="System planning">
             <div class="functional-requirements">
                 <h2>Functional requirement</h2>
-                <p>Placeholder text: describe what this system should do and how it should behave.</p>
-                <p>Placeholder text: add the key requirements this system needs to meet.</p>
+                <p>“There should be an upgrade screen at the end of each wave that picks 3 random abilities. When you choose an ability, it should hide the UI and apply the ability.”</p>
+                <p>Testable criteria:</p>
+                <p>Upgrade UI appears at the end of a wave with the name, description and level</p>
+                <p>Clicking the button applies the correct upgrade</p>
+                <p>The same upgrade shouldn’t be able to appear more than once in the same round</p>
             </div>
             <figure class="flowchart-planning">
                 <figcaption>Flowchart planning</figcaption>
-                <img src="Placeholder.png" alt="Placeholder flowchart planning image">
+                <img src="AbilitySystemFlowchart.png" alt="Ability System Flowchart">
             </figure>
         </section>
         <figure class="breakdown-figure">
-            <img class="breakdown-image" src="Placeholder.png" alt="Placeholder image for Orbit Adventure: Rebellion System 3">
+            <img class="breakdown-image" src="AbilitySystem1.png" alt="Ability System">
             <figcaption class="breakdown-descriptions">
-            <p>Placeholder description: this section will explain one part of the system and how it works.</p>
-            <p>Placeholder description: this section will cover another implementation detail and the choices behind it.</p>
-            <p>Placeholder description: this section will describe how this system connects to the rest of the project.</p>
+            <p>Variables for storing the upgrades chosen, and a dictionary that tracks the levels for all upgrades.</p>
+            </figcaption>
+        </figure>
+        <figure class="breakdown-figure">
+            <img class="breakdown-image" src="AbilitySystem2.png" alt="Ability System">
+            <figcaption class="breakdown-descriptions">
+            <p>This method is called at the end of a wave. It first chooses a random ability from an array of ability SOs that contain the name and description of the ability. It rerolls incase of duplicates, and then assigns the text on the upgrade UI to display everything correctly.</p>
+            </figcaption>
+        </figure>
+        <figure class="breakdown-figure">
+            <img class="breakdown-image" src="AbilitySystem3.png" alt="Ability System">
+            <figcaption class="breakdown-descriptions">
+            <p>Add every ability to the dictionary at level 1 to begin with.</p>
+            </figcaption>
+        </figure>
+        <figure class="breakdown-figure">
+            <img class="breakdown-image" src="AbilitySystem4.png" alt="Ability System">
+            <figcaption class="breakdown-descriptions">
+            <p>This method is called when clicking a button on the upgrade UI. Each button provides either 1, 2, or 3 in the parameters, and that dictates which upgrade was selected. It then finds the ability in the dictionary and increments its level by 1</p>
             </figcaption>
         </figure>
     </main>

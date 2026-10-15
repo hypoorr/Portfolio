@@ -55,7 +55,7 @@ document.querySelectorAll("[data-scroll-target]").forEach((button) => {
 const backToTopButton = document.querySelector(".back-to-top");
 
 function updateBackToTopVisibility() {
-    const isAtBottom = window.scrollY + window.innerHeight >= page.scrollHeight - 1;
+    const isAtBottom = window.scrollY + window.innerHeight >= 1000;
     backToTopButton.classList.toggle("is-visible", isAtBottom);
 }
 

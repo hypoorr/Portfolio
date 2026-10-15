@@ -11,7 +11,7 @@
         <a class="back-to-projects" href="index.html#projects">Back to projects</a>
         <nav class="system-navigation" aria-label="Project systems">
             <a class="system-arrow" href="orbit-adventure-rebellion-system-3.html" aria-label="Previous system">&larr;</a>
-            <h1>Orbit Adventure: Rebellion — System 1</h1>
+            <h1>Orbit Adventure: Rebellion Weapon System</h1>
             <a class="system-arrow" href="orbit-adventure-rebellion-system-2.html" aria-label="Next system">&rarr;</a>
         </nav>
     </header>
@@ -30,11 +30,33 @@
             </figure>
         </section>
         <figure class="breakdown-figure">
-            <img class="breakdown-image" src="Placeholder.png" alt="Placeholder image for the Orbit Adventure: Rebellion code breakdown">
+            <img class="breakdown-image" src="WeaponSystem1.png" alt="Weapon System">
             <figcaption class="breakdown-descriptions">
-            <p>Placeholder description: this section will explain one part of the system and how it works.</p>
-            <p>Placeholder description: this section will cover another implementation detail and the choices behind it.</p>
-            <p>Placeholder description: this section will describe how this system connects to the rest of the project.</p>
+            <p>Weapon variables for customization of the weapon in the inspector</p>
+            </figcaption>
+        </figure>
+        <figure class="breakdown-figure">
+            <img class="breakdown-image" src="WeaponSystem2.png" alt="Weapon System">
+            <figcaption class="breakdown-descriptions">
+            <p>Defines ammo count and other systems in use.</p>
+            </figcaption>
+        </figure>
+        <figure class="breakdown-figure">
+            <img class="breakdown-image" src="WeaponSystem3.png" alt="Weapon System">
+            <figcaption class="breakdown-descriptions">
+            <p>This check is using the Unity input system to see if the set keybinds are pressed for attacking and reloading. It checks for if the weapon is automatic or semi auto, and changes the ammo text to display if you are reloading.</p>
+            </figcaption>
+        </figure>
+        <figure class="breakdown-figure">
+            <img class="breakdown-image" src="WeaponSystem4.png" alt="Weapon System">
+            <figcaption class="breakdown-descriptions">
+            <p>Method is called to create a bullet object. Checks any upgrade to apply to the bullet damage, and sets the bullet damage in the bullet class. Also assigns the bullet speed.</p>
+            </figcaption>
+        </figure>
+        <figure class="breakdown-figure">
+            <img class="breakdown-image" src="WeaponSystem5.png" alt="Weapon System">
+            <figcaption class="breakdown-descriptions">
+            <p>Reloading coroutine to apply correct amount of ammo to the magazine. Checks to see if there is enough ammo in the inventory to fully reload, but if not, will add the remaining ammo to the magazine and set the ammo count in the inventory to 0.</p>
             </figcaption>
         </figure>
     </main>
