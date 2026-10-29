@@ -16,11 +16,9 @@ body::before {
     position: fixed;
     z-index: 10;
     inset: 0;
-    background: radial-gradient(
-        circle 220px at var(--cursor-x, -1000px) var(--cursor-y, -1000px),
-        rgba(209, 107, 252, 0.12),
-        transparent 75%
-    );
+    background: radial-gradient(circle 220px at var(--cursor-x, -1000px) var(--cursor-y, -1000px),
+            rgba(209, 107, 252, 0.12),
+            transparent 75%);
     content: "";
     opacity: var(--cursor-light-opacity, 0);
     pointer-events: none;
@@ -419,7 +417,7 @@ p {
     font-weight: 700;
 }
 
-main > p {
+main>p {
     animation: hero-drop-in 1s ease-out 50ms both;
 }
 
