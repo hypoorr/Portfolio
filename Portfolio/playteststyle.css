@@ -2,19 +2,34 @@
 
 #game {
     position: absolute;
-    left: 0%;
-    top: 0.5%;
+    left: 50%;
+    top: 50%;
     width: 100%;
     height: 100%;
     z-index: 1;
     border: none;
-    transform: scale(0.81);
+
+    transform: translate(-50%, -50%) scale(0.81);
+    transform-origin: center;
+
     display: none;
+}
+
+@media (max-width: 1400px) {
+    #game {
+        transform: translate(-50%, -50%) scale(0.65);
+    }
+}
+
+@media (max-width: 1000px) {
+    #game {
+        transform: translate(-50%, -50%) scale(0.5);
+    }
 }
 
 #backButton {
     position: absolute;
-    z-index: 99;
+    z-index: 1;
     width: 70px;
     height: 20px;
     background-color: #5D4E63;

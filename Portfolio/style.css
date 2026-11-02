@@ -10,13 +10,26 @@ body {
     background-color: #2D1E33;
     color: #DEDEDE;
     font-family: 'Inter', sans-serif;
+    isolation: isolate;
+}
+
+body::after {
+    position: fixed;
+    z-index: -1;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(222, 222, 222, 0.65) 1px, transparent 1.5px);
+    background-size: 24px 24px;
+    content: "";
+    pointer-events: none;
+    -webkit-mask-image: radial-gradient(circle 440px at var(--cursor-x, -1000px) var(--cursor-y, -1000px), #000 0%, rgba(0, 0, 0, 0.8) 45%, transparent 100%);
+    mask-image: radial-gradient(circle 440px at var(--cursor-x, -1000px) var(--cursor-y, -1000px), #000 0%, rgba(0, 0, 0, 0.8) 45%, transparent 100%);
 }
 
 body::before {
     position: fixed;
-    z-index: 10;
+    z-index: -1;
     inset: 0;
-    background: radial-gradient(circle 220px at var(--cursor-x, -1000px) var(--cursor-y, -1000px),
+    background: radial-gradient(circle 420px at var(--cursor-x, -1000px) var(--cursor-y, -1000px),
             rgba(209, 107, 252, 0.12),
             transparent 75%);
     content: "";
@@ -533,4 +546,8 @@ span {
     .flowchart-planning {
         padding: 20px;
     }
+}
+
+#catimage {
+    width: 250px;
 }
