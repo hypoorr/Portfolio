@@ -551,3 +551,8 @@ span {
 #catimage {
     width: 250px;
 }
+
+#githubimage {
+    position: fixed;
+    width: 75px;
+}
