@@ -1,4 +1,4 @@
-import { Application } from '@splinetool/runtime';
+import { Application } from 'https://unpkg.com/@splinetool/runtime@1.12.69/build/runtime.js';
 
 const canvas = document.getElementById('canvas3d');
 // htmlContentMode 'inline' runs the scene's HTML content (if any) directly in
