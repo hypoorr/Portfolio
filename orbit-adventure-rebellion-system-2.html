@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orbit Adventure: Rebellion System 2 Code Breakdown</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="breakdown-page">
     <header class="breakdown-header">
         <a class="back-to-projects" href="index.html#projects">Back to projects</a>
@@ -19,7 +21,9 @@
         <section class="system-planning" aria-label="System planning">
             <div class="functional-requirements">
                 <h2>Functional requirement</h2>
-                <p>“There should be an inventory system that stores your ammo, and collected weapons. You should be able to only hold 2 weapons at a time, and easily switch between them both by pressing Q. If a weapon is picked up, swap the held weapon with the one being picked up”</p>
+                <p>“There should be an inventory system that stores your ammo, and collected weapons. You should be able
+                    to only hold 2 weapons at a time, and easily switch between them both by pressing Q. If a weapon is
+                    picked up, swap the held weapon with the one being picked up”</p>
                 <p>Testable criteria:</p>
                 <p>Weapons switch by pressing Q</p>
                 <p>Ammo is correctly tracked in the inventory.</p>
@@ -31,13 +35,53 @@
             </figure>
         </section>
         <figure class="breakdown-figure">
-            <img class="breakdown-image" src="Placeholder.png" alt="Placeholder image for Orbit Adventure: Rebellion System 2">
+            <img class="breakdown-image" src="InventorySystemRebellion.png"
+                alt="Placeholder image for Orbit Adventure: Rebellion System 2">
             <figcaption class="breakdown-descriptions">
-            <p>Placeholder description: this section will explain one part of the system and how it works.</p>
-            <p>Placeholder description: this section will cover another implementation detail and the choices behind it.</p>
-            <p>Placeholder description: this section will describe how this system connects to the rest of the project.</p>
+                <p>inventory list of gameobjects to store held weapons, and a weapon list containing all available
+                    weapons</p>
             </figcaption>
         </figure>
+        <figure class="breakdown-figure">
+            <img class="breakdown-image" src="InventorySystemRebellion2.png"
+                alt="Placeholder image for Orbit Adventure: Rebellion System 2">
+            <figcaption class="breakdown-descriptions">
+                <p>Assigns all available weapons to a list to easily enable/disable the gameobject</p>
+            </figcaption>
+        </figure>
+        <figure class="breakdown-figure">
+            <img class="breakdown-image" src="InventorySystemRebellion3.png"
+                alt="Placeholder image for Orbit Adventure: Rebellion System 2">
+            <figcaption class="breakdown-descriptions">
+                <p>Waits for SwitchWeapon bind (defined in the Unity input system as Q) and will search the inventory
+                    for another weapon that isn’t equipped and equips it</p>
+            </figcaption>
+        </figure>
+        <figure class="breakdown-figure">
+            <img class="breakdown-image" src="InventorySystemRebellion4.png"
+                alt="Placeholder image for Orbit Adventure: Rebellion System 2">
+            <figcaption class="breakdown-descriptions">
+                <p>Called whenever a new weapon is switched to. Enables the gameobject of the new weapon</p>
+            </figcaption>
+        </figure>
+        <figure class="breakdown-figure">
+            <img class="breakdown-image" src="InventorySystemRebellion5.png"
+                alt="Placeholder image for Orbit Adventure: Rebellion System 2">
+            <figcaption class="breakdown-descriptions">
+                <p>Method that will be called when a new weapon is added to the inventory. Will be used for switching
+                    held weapon, however there is only 2 weapons in the game right now so it is unfinished.</p>
+            </figcaption>
+        </figure>
+        <figure class="breakdown-figure">
+            <img class="breakdown-image" src="InventorySystemRebellion6.png"
+                alt="Placeholder image for Orbit Adventure: Rebellion System 2">
+            <figcaption class="breakdown-descriptions">
+                <p>This method finds the index number of a weapon within the weaponList List by looping through the list
+                    and returning the index number when the name matches.</p>
+            </figcaption>
+        </figure>
+
     </main>
 </body>
+
 </html>
